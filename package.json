@@ -1,0 +1,28 @@
+{
+  "name": "sequelize-test-fixtures",
+  "version": "1.0.0",
+  "description": "Sequelize test fixtures",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frenchie4111/sequelize-test-fixtures.git"
+  },
+  "keywords": [
+    "sequelize",
+    "test",
+    "fixtures",
+    "database",
+    "clear",
+    "model",
+    "models"
+  ],
+  "author": "Mike Lyons <mdl0394@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frenchie4111/sequelize-test-fixtures/issues"
+  },
+  "homepage": "https://github.com/frenchie4111/sequelize-test-fixtures"
+}
