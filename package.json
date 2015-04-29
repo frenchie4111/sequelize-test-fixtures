@@ -24,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/frenchie4111/sequelize-test-fixtures/issues"
   },
-  "homepage": "https://github.com/frenchie4111/sequelize-test-fixtures"
+  "homepage": "https://github.com/frenchie4111/sequelize-test-fixtures",
+  "dependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4",
+    "mocha-directory": "^1.0.0",
+    "mocha-runable-generators": "^1.0.0",
+    "mocha-runnable-generators": "^1.0.2",
+    "underscore": "^1.8.3"
+  }
 }
