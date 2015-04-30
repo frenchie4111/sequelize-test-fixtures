@@ -9,10 +9,14 @@
     'use strict';
 
     var fixtures = require( '../../' ),
-        assert = require( 'chai' ).assert;
+        assert = require( 'chai' ).assert,
+        util = require( '../util' );
 
     it( 'should load fixture', function *() {
-        var loaded_fixtures = yield fixtures( 'test' );
+        // Initialize fixtures
+        fixtures( util.sequelize.models, __dirname );
+
+        var loaded_fixtures = yield fixtures.load( [ 'test_fixture' ] );
         assert.isDefined( loaded_fixtures );
     } );
 })();

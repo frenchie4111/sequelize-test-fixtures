@@ -29,8 +29,12 @@
     "chai": "^2.3.0",
     "mocha": "^2.2.4",
     "mocha-directory": "^1.0.0",
-    "mocha-runable-generators": "^1.0.0",
     "mocha-runnable-generators": "^1.0.2",
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "q": "^1.3.0",
+    "require-absolute": "^1.0.1",
+    "sequelize": "^2.1.0",
     "underscore": "^1.8.3"
   }
 }

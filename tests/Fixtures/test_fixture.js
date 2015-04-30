@@ -8,8 +8,9 @@
 (function() {
     'use strict';
 
-    return [
+    module.exports = [
         {
+            key: 'test_model',
             model: 'TestModel',
             data: {
                 name: 'Hello'
