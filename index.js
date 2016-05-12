@@ -89,7 +89,14 @@
                 var promise = _createSubqueryPromise( fixture, model )
                     .then( function() {
                         return model
-                            .create( fixture.data );
+                            .create( fixture.data )
+                            .catch( function( err ) {
+                                if( fixture.ignore_duplicate && err.name && err.name === 'SequelizeUniqueConstraintError' ) {
+                                    return;
+                                } else {
+                                    throw err;
+                                }
+                            } );
                     } );
 
                 return promise;
