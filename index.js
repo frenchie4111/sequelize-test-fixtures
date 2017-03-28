@@ -25,7 +25,7 @@
         assert.isDefined( models, 'Fixtures init requires models' );
         assert.isDefined( root, 'Fixtures init requires root' );
 
-        config = _.defaults( config, {
+        config = _.defaults( config || {}, {
             create_config: {}
         } );
 
