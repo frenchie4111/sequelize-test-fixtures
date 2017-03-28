@@ -100,7 +100,7 @@
                 var promise = _createSubqueryPromise( fixture, model )
                     .then( function() {
                         return model
-                            .create( fixture.data, config.create_config );
+                            .create( fixture.data, config.create_config )
                             .catch( function( err ) {
                                 if( fixture.ignore_duplicate && err.name && err.name === 'SequelizeUniqueConstraintError' ) {
                                     return;
