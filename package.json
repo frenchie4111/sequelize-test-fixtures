@@ -1,6 +1,6 @@
 {
   "name": "sequelize-test-fixtures",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Sequelize test fixtures",
   "main": "index.js",
   "scripts": {
