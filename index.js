@@ -14,9 +14,20 @@
         assert = require( 'chai' ).assert,
         require_absolute = require( 'require-absolute' );
 
-    module.exports = function( models, root ) {
+    /**
+     * Initializes the library, will return and expose a load function
+     * @param  {[type]} models The sequelize models
+     * @param  {[type]} root   The directory where your fixtures are stored
+     * @param  {[type]} config Some config
+     * @param  {[type]} config.create_config Passed to model.create as the second argument
+     */
+    module.exports = function( models, root, config ) {
         assert.isDefined( models, 'Fixtures init requires models' );
         assert.isDefined( root, 'Fixtures init requires root' );
+
+        config = _.defaults( config, {
+            create_config: {}
+        } );
 
         /**
          * Searches associations of model for associated model name
@@ -89,7 +100,7 @@
                 var promise = _createSubqueryPromise( fixture, model )
                     .then( function() {
                         return model
-                            .create( fixture.data )
+                            .create( fixture.data, config.create_config );
                             .catch( function( err ) {
                                 if( fixture.ignore_duplicate && err.name && err.name === 'SequelizeUniqueConstraintError' ) {
                                     return;
